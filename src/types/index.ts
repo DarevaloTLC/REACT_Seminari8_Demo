@@ -1,4 +1,5 @@
 export interface User {
+    _id: string; // ID del usuario, se espera que sea un string
     name: string;
     age: number;
     email?: string;

@@ -8,6 +8,7 @@ interface FormProps {
 }
 
 const INITIAL_STATE: User = {
+    _id: '', // ID del usuario, se espera que sea un string
     name: '',
     age: 0,
     email: '',
@@ -49,9 +50,10 @@ const Form = ({ onNewUser }: FormProps) => {
             return;
         }
         try {
+            // Llamar al servicio para agregar un nuevo usuario
             const addedUser = await addUser(inputValues);
-            onNewUser(addedUser);
-            dispatch({ type: "clear" });
+            onNewUser(addedUser); // Notificar al componente padre sobre el nuevo usuario
+            dispatch({ type: "clear" }); // Limpiar el formulario
         } catch (error) {
             console.error('Error submitting form:', error);
         }

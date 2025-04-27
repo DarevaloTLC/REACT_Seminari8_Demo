@@ -46,3 +46,32 @@
     color: #777;
     word-break: break-all; /* Ensure long emails don't overflow */
 }
+
+.id {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.editButton {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px; /* Espaciado superior */
+    align-self: flex-start; /* Alinear el botón al inicio */
+}
+
+.editButton:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+.editButton:active {
+    background-color: #3e8e41; /* Verde más oscuro al hacer clic */
+    transform: scale(0.95); /* Efecto de reducción */
+}
